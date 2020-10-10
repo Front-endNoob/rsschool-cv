@@ -10,7 +10,7 @@
 
 ## About me:
 
-I have different hobbies and interests. I like to play a football, walk in a forest, nature hikes. Interested in science and technology.
+have different hobbies and interests. I like to play a football, walk in a forest, nature hikes. Interested in science and technology.
 
 
 ## Skills:
