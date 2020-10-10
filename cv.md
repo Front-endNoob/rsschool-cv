@@ -2,7 +2,7 @@
 
 ## Contacts:
 
-- Phone/Viber: **+375298594443**
+- Phone/Viber: **+375(29)859-44-43**
 - Discord: **Oleg Kolp#8541**
 - Skype: **stivemaster_89**
 - GitHub: [**https://github.com/Front-endNoob**](https://github.com/Front-endNoob)
