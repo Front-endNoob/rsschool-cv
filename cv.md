@@ -27,7 +27,7 @@ const sayHello = () => console.log('Hello, World!');
 sayHello();
 
 ```
-## Work expirience:
+## Work experience:
 
 I worked in the specialty: Adjuster of machine tools with programmed control. Enterprises: BelAZ, KZTSH.
 
