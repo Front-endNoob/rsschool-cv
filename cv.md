@@ -39,4 +39,4 @@ I worked in the specialty: Adjuster of machine tools with programmed control. En
 
 ## English:
 
-My english level is about **A1+-A2**. I have communication experience with foreings mostly from online games. Sometimes I need to use Google Translator, but I can chating about different themes.
+My english level is about **A1+**. I have communication experience with foreings mostly from online games. Sometimes I need to use Google Translator, but I can chating about different themes.
