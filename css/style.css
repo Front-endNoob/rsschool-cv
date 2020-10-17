@@ -282,6 +282,80 @@ footer {
     }
 }
 
+@media (max-width: 550px) {
+    .about__img{
+        display: none;
+    }
+    .about__title {
+        margin: 0 auto;
+    }
+    .about h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+    .about p {
+        display: block;
+        width: 100%;
+        font-size: 40px;
+        line-height: 40px;
+        opacity: 0.7;
+        margin-top: 25px;
+        text-align: center
+    }
+    .about__title:before {
+    width: 50px;
+    height: 298px;
+    }
+
+    .header__menu-items li {
+    padding-bottom: 20px
+    }
+
+    .header__menu-items li a {
+        font-size: 30px;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+    .skills p {
+        font-size: 40px;
+        line-height: 40px;
+        opacity: 0.7;
+    }
+
+    .education-work {
+        flex-direction: column;
+        align-items: center
+    }
+    .education-work h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .education-work p,li {
+        font-size: 40px;
+        opacity: 0.7;
+        margin-top: 20px;
+    }
+    .education-work__education li {
+        line-height: 45px;
+    }
+
+    .education-work__work p {
+        line-height: 45px;
+    }
+
+    .contacts h2 {
+        font-size: 40px;
+    }
+
+    .contacts li,a {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+
+}
+
 
 
 
