@@ -14,4 +14,13 @@ var allElements = function allElements() {
   });
 };
 
-allElements();
+allElements(); // Active links for menu
+
+var menu = document.querySelector('.menu');
+menu.addEventListener('click', function (e) {
+  var menuItems = menu.querySelectorAll('li');
+  menuItems.forEach(function (el) {
+    el.querySelector('a').classList.remove('active_link');
+    e.target.classList.add('active_link');
+  });
+});

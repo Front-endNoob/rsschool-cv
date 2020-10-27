@@ -31,3 +31,16 @@ const allElements = () => {
 
 allElements();
 
+
+// Active links for menu
+
+const menu = document.querySelector('.menu');
+menu.addEventListener('click', e => {
+    const menuItems = menu.querySelectorAll('li');
+    menuItems.forEach(el => {
+        el.querySelector('a').classList.remove('active_link');
+        e.target.classList.add('active_link')
+    })
+})
+
+
