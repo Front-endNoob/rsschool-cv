@@ -78,7 +78,7 @@ document.addEventListener('scroll', ()=> {
                 el.querySelector('a').setAttribute('class', 'active_link');
             }
 
-            if (pageYOffset > 1165 && (el.querySelector('a').innerText ==='PORTFOLIO')) {
+            if ((pageYOffset > 1165 && pageYOffset < 1465) && (el.querySelector('a').innerText ==='PORTFOLIO')) {
                 el.querySelector('a').setAttribute('class', 'active_link');
             }
         })
