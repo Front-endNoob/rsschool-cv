@@ -270,6 +270,11 @@ html {
     margin-right: 10px;
 }
 
+.tags li.active_tag {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
 .portfolio-images {
     display: grid;
     grid-template-columns: repeat(4, auto);
