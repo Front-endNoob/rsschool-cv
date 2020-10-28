@@ -61,9 +61,28 @@ const allImgPortfolio = (array,imgPort) => {
          imgPort[i].setAttribute('src', array[i]);
     }
 }
-
 allImgPortfolio(imgArray,imgPort);
 
+
+// This changed active link when you scrolling
+document.addEventListener('scroll', ()=> {
+
+        menuItems.forEach(el => {
+            el.querySelector('a').classList.remove('active_link');
+
+            if (pageYOffset <= 600 && (el.querySelector('a').innerText ==='HOME')) {
+                el.querySelector('a').setAttribute('class', 'active_link');
+            }
+
+            if ((pageYOffset > 605 && pageYOffset < 1165) && (el.querySelector('a').innerText ==='SERVICES')) {
+                el.querySelector('a').setAttribute('class', 'active_link');
+            }
+
+            if (pageYOffset > 1165 && (el.querySelector('a').innerText ==='PORTFOLIO')) {
+                el.querySelector('a').setAttribute('class', 'active_link');
+            }
+        })
+})
 
 
 
