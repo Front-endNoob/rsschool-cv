@@ -15,21 +15,23 @@ var portfolio = document.querySelector('.portfolio-images'); // This images tags
 
 var imgPort = portfolio.querySelectorAll('img'); // Shuffle function
 
+// This Shuffle Function for Images
 var shuffleImages = function shuffleImages(images) {
   images.sort(function () {
     return Math.random() - 0.5;
   });
   return images;
-}; // Active links for nav menu
+}; 
 
-
+// Active links for nav menu
 menu.addEventListener('click', function (e) {
   menuItems.forEach(function (el) {
     el.querySelector('a').classList.remove('active_link');
   });
   e.target.classList.add('active_link');
-}); // Active tags for tags menu and shuffle Images in Portfolio
+}); 
 
+// Active tags for tags menu and shuffle Images in Portfolio
 tags.addEventListener('click', function (e) {
   if (!e.target.classList.contains('active_tag')) {
     tagsItems.forEach(function (el) {
@@ -38,16 +40,18 @@ tags.addEventListener('click', function (e) {
     e.target.classList.add('active_tag');
     allImgPortfolio(shuffleImages(imgArray), imgPort);
   }
-}); // This function for displaying images into portfolio
+}); 
 
+// This function for displaying images into portfolio
 var allImgPortfolio = function allImgPortfolio(array, imgPort) {
   for (var i = 0; i < array.length; i++) {
     imgPort[i].setAttribute('src', array[i]);
   }
 };
 
-allImgPortfolio(imgArray, imgPort); // This changed active link when you scrolling
+allImgPortfolio(imgArray, imgPort); 
 
+// This changed active link when you scrolling
 document.addEventListener('scroll', function () {
   menuItems.forEach(function (el) {
     el.querySelector('a').classList.remove('active_link');
