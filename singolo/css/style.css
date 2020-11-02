@@ -406,7 +406,7 @@ header,section,footer {
 
 .menu-burger .burger {
     left: 22.5px;
-    top: 23.5px;
+    top: 27.5px;
 }
 
 .menu-burger .burger {
@@ -424,7 +424,7 @@ header,section,footer {
     letter-spacing: 0.03em;
     color: #fefeff;
     cursor: pointer;
-    margin-top: 24px;
+    margin-top: 26px;
 }
 
 .menu-burger__list span {
@@ -563,7 +563,10 @@ header,section,footer {
         margin: 0 auto;
     }
 
-    #slider .wrapper,
+    #slider .wrapper {
+        padding: 0 8px;
+    }
+
     #header .wrapper {
         padding: 0 20px 0 20px;
     }
