@@ -66,22 +66,67 @@ allImgPortfolio(imgArray,imgPort);
 
 // This changed active link when you scrolling
 document.addEventListener('scroll', ()=> {
+// Active links for header menu
+    menuItems.forEach(el => {
+        el.querySelector('a').classList.remove('active_link');
 
-        menuItems.forEach(el => {
-            el.querySelector('a').classList.remove('active_link');
+        if (pageYOffset <= 600 && (el.querySelector('a').innerText ==='HOME')) {
+            el.querySelector('a').setAttribute('class', 'active_link');
+        }
 
-            if (pageYOffset <= 600 && (el.querySelector('a').innerText ==='HOME')) {
-                el.querySelector('a').setAttribute('class', 'active_link');
-            }
+        if ((pageYOffset > 605 && pageYOffset < 1165) && (el.querySelector('a').innerText ==='SERVICES')) {
+            el.querySelector('a').setAttribute('class', 'active_link');
+        }
 
-            if ((pageYOffset > 605 && pageYOffset < 1165) && (el.querySelector('a').innerText ==='SERVICES')) {
-                el.querySelector('a').setAttribute('class', 'active_link');
-            }
+        if ((pageYOffset > 1165 && pageYOffset < 1465) && (el.querySelector('a').innerText ==='PORTFOLIO')) {
+            el.querySelector('a').setAttribute('class', 'active_link');
+        }
+    })
+// Active links for burger menu
+    menuBurgerItems.forEach(el => {
+        el.querySelector('a').classList.remove('active_link');
 
-            if ((pageYOffset > 1165 && pageYOffset < 1465) && (el.querySelector('a').innerText ==='PORTFOLIO')) {
-                el.querySelector('a').setAttribute('class', 'active_link');
-            }
-        })
+        if (pageYOffset <= 305 && (el.querySelector('a').innerText ==='HOME')) {
+            el.querySelector('a').setAttribute('class', 'active_link');
+        }
+
+        if ((pageYOffset > 305 && pageYOffset < 1310) && (el.querySelector('a').innerText ==='SERVICES')) {
+            el.querySelector('a').setAttribute('class', 'active_link');
+        }
+
+        if ((pageYOffset > 1310 && pageYOffset < 2075) && (el.querySelector('a').innerText ==='PORTFOLIO')) {
+            el.querySelector('a').setAttribute('class', 'active_link');
+        }
+    })
+})
+
+// Menu burger open\close effect and active menu items
+const burgerActive = document.querySelectorAll('.burger');
+
+const menuBurger = document.querySelector('.menu-burger');
+
+const wrapperBurger = document.querySelector('.wrapper-burger');
+
+const html = document.querySelector('html');
+
+const menuBurgerUl = document.querySelector('.menu-burger__items');
+
+const menuBurgerItems = menuBurgerUl.querySelectorAll('li');
+
+burgerActive.forEach(e => {
+    e.addEventListener('click', () => {
+        wrapperBurger.classList.toggle('active_menu');
+        html.classList.toggle('active_menu');
+        menuBurger.classList.toggle('active_menu');
+    })
+})
+
+menuBurgerItems.forEach(elem=> {
+    elem.querySelector('a').addEventListener('click', ()=> {
+        wrapperBurger.classList.remove('active_menu');
+        html.classList.remove('active_menu');
+        menuBurger.classList.remove('active_menu');
+    })
 })
 
 

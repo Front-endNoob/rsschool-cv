@@ -15,23 +15,21 @@ var portfolio = document.querySelector('.portfolio-images'); // This images tags
 
 var imgPort = portfolio.querySelectorAll('img'); // Shuffle function
 
-// This Shuffle Function for Images
 var shuffleImages = function shuffleImages(images) {
   images.sort(function () {
     return Math.random() - 0.5;
   });
   return images;
-}; 
+}; // Active links for nav menu
 
-// Active links for nav menu
+
 menu.addEventListener('click', function (e) {
   menuItems.forEach(function (el) {
     el.querySelector('a').classList.remove('active_link');
   });
   e.target.classList.add('active_link');
-}); 
+}); // Active tags for tags menu and shuffle Images in Portfolio
 
-// Active tags for tags menu and shuffle Images in Portfolio
 tags.addEventListener('click', function (e) {
   if (!e.target.classList.contains('active_tag')) {
     tagsItems.forEach(function (el) {
@@ -40,19 +38,18 @@ tags.addEventListener('click', function (e) {
     e.target.classList.add('active_tag');
     allImgPortfolio(shuffleImages(imgArray), imgPort);
   }
-}); 
+}); // This function for displaying images into portfolio
 
-// This function for displaying images into portfolio
 var allImgPortfolio = function allImgPortfolio(array, imgPort) {
   for (var i = 0; i < array.length; i++) {
     imgPort[i].setAttribute('src', array[i]);
   }
 };
 
-allImgPortfolio(imgArray, imgPort); 
+allImgPortfolio(imgArray, imgPort); // This changed active link when you scrolling
 
-// This changed active link when you scrolling
 document.addEventListener('scroll', function () {
+  // Active links for header menu
   menuItems.forEach(function (el) {
     el.querySelector('a').classList.remove('active_link');
 
@@ -67,5 +64,42 @@ document.addEventListener('scroll', function () {
     if (pageYOffset > 1165 && pageYOffset < 1465 && el.querySelector('a').innerText === 'PORTFOLIO') {
       el.querySelector('a').setAttribute('class', 'active_link');
     }
+  }); // Active links for burger menu
+
+  menuBurgerItems.forEach(function (el) {
+    el.querySelector('a').classList.remove('active_link');
+
+    if (pageYOffset <= 305 && el.querySelector('a').innerText === 'HOME') {
+      el.querySelector('a').setAttribute('class', 'active_link');
+    }
+
+    if (pageYOffset > 305 && pageYOffset < 1310 && el.querySelector('a').innerText === 'SERVICES') {
+      el.querySelector('a').setAttribute('class', 'active_link');
+    }
+
+    if (pageYOffset > 1310 && pageYOffset < 2075 && el.querySelector('a').innerText === 'PORTFOLIO') {
+      el.querySelector('a').setAttribute('class', 'active_link');
+    }
+  });
+}); // Menu burger open\close effect and active menu items
+
+var burgerActive = document.querySelectorAll('.burger');
+var menuBurger = document.querySelector('.menu-burger');
+var wrapperBurger = document.querySelector('.wrapper-burger');
+var html = document.querySelector('html');
+var menuBurgerUl = document.querySelector('.menu-burger__items');
+var menuBurgerItems = menuBurgerUl.querySelectorAll('li');
+burgerActive.forEach(function (e) {
+  e.addEventListener('click', function () {
+    wrapperBurger.classList.toggle('active_menu');
+    html.classList.toggle('active_menu');
+    menuBurger.classList.toggle('active_menu');
+  });
+});
+menuBurgerItems.forEach(function (elem) {
+  elem.querySelector('a').addEventListener('click', function () {
+    wrapperBurger.classList.remove('active_menu');
+    html.classList.remove('active_menu');
+    menuBurger.classList.remove('active_menu');
   });
 });
