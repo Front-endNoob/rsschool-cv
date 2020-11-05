@@ -63,22 +63,41 @@ const allImgPortfolio = (array,imgPort) => {
 }
 allImgPortfolio(imgArray,imgPort);
 
+// This add active_link when scrolling
+document.addEventListener('scroll', onScroll);
 
-// This changed active link when you scrolling
+    function onScroll() {
+        const curPos = window.scrollY;
+        const sections = document.querySelectorAll('header, section');
+        
+        sections.forEach((el) => {
+            const heightHeader = 95;
+            if(el.offsetTop - heightHeader <= curPos && (el.offsetTop + el.offsetHeight - heightHeader) > curPos) {
+                menuItems.forEach((a) => {
+                    a.querySelector('a').classList.remove('active_link');
+                    if(el.getAttribute('id') === a.querySelector('a').getAttribute('href').substring(1)) {
+                        a.querySelector('a').classList.add('active_link');
+                    }
+                })
+            }
+        })
+    }
+
+// This correct offset when you scrolling
 document.addEventListener('scroll', ()=> {
 // Active links for header menu
     menuItems.forEach(el => {
         el.querySelector('a').classList.remove('active_link');
 
-        if (pageYOffset <= 600 && (el.querySelector('a').innerText ==='HOME')) {
+        if (pageYOffset <= 550 && (el.querySelector('a').innerText ==='HOME')) {
             el.querySelector('a').setAttribute('class', 'active_link');
         }
 
-        if ((pageYOffset > 605 && pageYOffset < 1165) && (el.querySelector('a').innerText ==='SERVICES')) {
+        if ((pageYOffset > 555 && pageYOffset < 1165) && (el.querySelector('a').innerText ==='SERVICES')) {
             el.querySelector('a').setAttribute('class', 'active_link');
         }
 
-        if ((pageYOffset > 1165 && pageYOffset < 1465) && (el.querySelector('a').innerText ==='PORTFOLIO')) {
+        if ((pageYOffset > 1165 && pageYOffset < 1965) && (el.querySelector('a').innerText ==='PORTFOLIO')) {
             el.querySelector('a').setAttribute('class', 'active_link');
         }
     })
@@ -94,7 +113,7 @@ document.addEventListener('scroll', ()=> {
             el.querySelector('a').setAttribute('class', 'active_link');
         }
 
-        if ((pageYOffset > 1310 && pageYOffset < 2075) && (el.querySelector('a').innerText ==='PORTFOLIO')) {
+        if ((pageYOffset > 1310 && pageYOffset < 2215) && (el.querySelector('a').innerText ==='PORTFOLIO')) {
             el.querySelector('a').setAttribute('class', 'active_link');
         }
     })

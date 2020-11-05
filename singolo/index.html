@@ -75,19 +75,35 @@
     </header>
 <!-- Slider Section -->
     <section class="slider" id="slider">
+        <input checked type="radio" name="respond" id="desktop">
         <div class="wrapper">
-            <div class="slider__items">
-                <div class="slider-button prev_button"></div>
-                <div class="slider-images">
-                    <figure class="slider-image__vertical"><img src="./src/img/phone-vertic.png" alt="Phone">
-                    </figure>
-                    <figure class="slider-image__horizontal"><img src="./src/img/phone-horizont.png" alt="Phone">
-                    </figure>
+            <input checked type="radio" name="slider" id="switch_one">
+            <input type="radio" name="slider" id="switch_two">
+            <input type="radio" name="slider" id="switch_three">
+            <input type="radio" name="slider" id="switch_four">
+            <div id="slider__items">
+                <div id="overflow">
+                    <div class="slider-images">
+                        <article class="slider-image__one"><img src="./src/img/Slider1.png" alt="Phone">
+                        </article>
+                        <article class="slider-image__two"><img src="./src/img/Slider2.png" alt="Phone">
+                        </article>
+                        <article class="slider-image__three"><img src="./src/img/Slider1_2.png" alt="Phone">
+                        </article>
+                        <article class="slider-image__four"><img src="./src/img/Slider2_2.png" alt="Phone">
+                        </article>
+                    </div>
                 </div>
-                <div class="slider-button next_button"></div>
+            </div>
+            <div id="controls">
+                <label for="switch_one"></label>
+                <label for="switch_two"></label>
+                <label for="switch_three"></label>
+                <label for="switch_four"></label>
             </div>
         </div>
     </section>
+    
 <!-- Services Section -->
     <section class="services" id="services">
         <div class="wrapper">
