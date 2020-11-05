@@ -99,6 +99,10 @@ header,section,footer {
 
 /* Slider Section */
 
+#slider {
+    max-height: 600px;
+}
+
 #slider .wrapper {
     max-width: 100%;
     padding: 0;
@@ -124,6 +128,7 @@ header,section,footer {
 
 article img {
     width: 100%;
+    height: 600px;
 }
 
 #desktop:checked ~ .wrapper {
@@ -545,9 +550,11 @@ label {
         padding: 40px 0 47px 0;
     }
 
-    .slider-image__vertical {
-        margin-right: 54px;
-      }
+    article img {
+        height: auto;
+    }
+
+
 }
 
 /* Media for 320px < width < 768px */
@@ -627,6 +634,10 @@ label {
     #switch_three:checked ~ #controls label:nth-child(4),
     #switch_four:checked ~ #controls label:nth-child(1) {
         margin-right: 20px;
+    }
+
+    article img {
+        height: auto;
     }
 
 }
