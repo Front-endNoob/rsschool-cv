@@ -45,10 +45,10 @@
      if (now < 12 && now > 06) {
          bgScreen.style.backgroundImage = "url('./img/morning.jpg')"
          greeting.textContent = 'Good Morning, ';
-     } else if (now < 18 && now > 12) {
+     } else if (now < 17 && now > 12) {
          bgScreen.style.backgroundImage = "url('./img/afternoon.jpg')"
          greeting.textContent = 'Good Afternoon, ';
-     } else if (now > 18 || now < 06) {
+     } else if (now > 17 || now < 06) {
          bgScreen.style.backgroundImage = "url('./img/night.jpg')"
          greeting.textContent = 'Good Nigth, ';
      }
