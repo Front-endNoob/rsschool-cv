@@ -20,6 +20,7 @@
      if (!str) return str
      str = str.replace(/\s+/g, '').trim()
      str = str.replace(/"/g, '')
+     if (str === '') return str
      return `${str[0].toUpperCase()}${str.slice(1,str.length)}`;
  }
 
