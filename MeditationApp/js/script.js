@@ -6,6 +6,7 @@ const pauseBorder = document.querySelector('.btn.pause')
 const dataBtns = document.querySelectorAll('.data');
 const video = document.querySelector('.video');
 const app = document.querySelector('.app');
+const wrapper = document.querySelector('.wrapper');
 let audio = new Audio("./src/audio/nature.mp3");
 
 let data = [{
@@ -113,4 +114,33 @@ appButtons.addEventListener('click', event => {
         }
     }
 
+})
+
+// Control panel animation
+
+appButtons.addEventListener('mouseout', (el) => {
+
+    if (el.toElement.classList.contains('wrapper')) {
+
+        appButtons.animate([{ opacity: 1 },
+                { opacity: 0.5, offset: 0.3 },
+                { opacity: 0 }
+            ],
+            1000);
+        appButtons.classList.add('none')
+    }
+
+})
+
+wrapper.addEventListener('mouseover', (el) => {
+    console.dir(el)
+    if (el.toElement.classList.contains('none')) {
+
+        appButtons.animate([{ opacity: 0.9},
+                { opacity: 0.95, offset: 0.5 },
+                { opacity: 1 }
+            ],
+            200);
+        appButtons.classList.remove('none')
+    }
 })

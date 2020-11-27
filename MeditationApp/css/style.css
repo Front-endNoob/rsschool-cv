@@ -45,6 +45,7 @@ body {
 	text-align: center;
 	justify-content: space-between;
 	padding-bottom: 100px;
+	z-index: 2;
 }
 
 .btn {
@@ -103,6 +104,10 @@ img.pause {
 .active_data {
 	background: #fff;
   	box-shadow: 0 0 30px 3px #fff;
+}
+
+.none {
+	opacity: 0;
 }
 
 
