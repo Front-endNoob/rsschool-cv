@@ -120,7 +120,7 @@ appButtons.addEventListener('click', event => {
 
 appButtons.addEventListener('mouseout', (el) => {
 
-    if (el.toElement.classList.contains('wrapper')) {
+    if (el.toElement.classList.contains('video') || el.toElement.classList.contains('wrapper')) {
 
         appButtons.animate([{ opacity: 1 },
                 { opacity: 0.5, offset: 0.3 },
