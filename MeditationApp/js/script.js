@@ -21,7 +21,7 @@ let data = [{
 
     {
         audio: "./src/audio/rain.mp3",
-        video: "src/video/rain.mp4"
+        video: "src/video/rain-1920x.mp4"
     },
 
     {
@@ -73,19 +73,19 @@ appButtons.addEventListener('click', event => {
             pauseBtn.src = "https://img.icons8.com/fluent-systems-filled/24/000000/circled-pause.png";
 
             if (event.target.classList.contains('beach')) {
-                video.src = "src/video/beach-1920x.mp4"
+                video.src = data[1].video;
                 audio = new Audio(data[1].audio);
                 audio.play()
             } else if (event.target.classList.contains('nature')) {
-                video.src = "src/video/Nature-1920x.mp4"
+                video.src = data[0].video;
                 audio = new Audio(data[0].audio);
                 audio.play()
             } else if (event.target.classList.contains('rain')) {
-                video.src = "src/video/rain.mp4"
+                video.src = data[2].video;
                 audio = new Audio(data[2].audio);
                 audio.play()
             } else if (event.target.classList.contains('nebula')) {
-                video.src = "src/video/nebula-1920x.mp4"
+                video.src = data[3].video;
                 audio = new Audio(data[3].audio);
                 audio.play()
             }
