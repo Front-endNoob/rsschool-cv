@@ -59,7 +59,7 @@ body {
   	transition: all 0.8s ease;
 }
 
-.beach, .nature, .rain {
+.beach, .nature, .nebula, .rain {
 	width: 100px;
   	height: 50px;
 	border-radius: 59% 41% 64% 36% / 26% 70% 30% 74%;

@@ -23,6 +23,11 @@ let data = [{
         video: "src/video/rain.mp4"
     },
 
+    {
+        audio: "./src/audio/nebula.mp3",
+        video: "src/video/nebula-1920x.mp4"
+    },
+
 ]
 
 video.pause();
@@ -77,6 +82,10 @@ appButtons.addEventListener('click', event => {
             } else if (event.target.classList.contains('rain')) {
                 video.src = "src/video/rain.mp4"
                 audio = new Audio(data[2].audio);
+                audio.play()
+            } else if (event.target.classList.contains('nebula')) {
+                video.src = "src/video/nebula-1920x.mp4"
+                audio = new Audio(data[3].audio);
                 audio.play()
             }
 
