@@ -83,24 +83,22 @@ appButtons.addEventListener('click', event => {
             if (event.target.classList.contains('beach')) {
                 video.src = data[1].video;
                 audio = new Audio(data[1].audio);
-                audio.loop = true;
                 audio.play()
             } else if (event.target.classList.contains('nature')) {
                 video.src = data[0].video;
                 audio = new Audio(data[0].audio);
-                audio.loop = true;
                 audio.play()
             } else if (event.target.classList.contains('rain')) {
                 video.src = data[2].video;
                 audio = new Audio(data[2].audio);
-                audio.loop = true;
                 audio.play()
             } else if (event.target.classList.contains('nebula')) {
                 video.src = data[3].video;
                 audio = new Audio(data[3].audio);
-                audio.loop = true;
                 audio.play()
             }
+
+            audio.loop = true;
 
         }, 500)
 
