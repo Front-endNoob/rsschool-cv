@@ -8,6 +8,7 @@ const video = document.querySelector('.video');
 const app = document.querySelector('.app');
 const wrapper = document.querySelector('.wrapper');
 let audio = new Audio("./src/audio/nature.mp3");
+audio.loop = true;
 
 let data = [{
         audio: "./src/audio/nature.mp3",
@@ -30,6 +31,13 @@ let data = [{
     },
 
 ]
+
+let playPauseBtn = {
+
+    play: "https://img.icons8.com/fluent-systems-filled/24/000000/google-play.png",
+
+    pause: "https://img.icons8.com/fluent-systems-filled/24/000000/circled-pause.png"
+}
 
 video.pause();
 
@@ -70,23 +78,27 @@ appButtons.addEventListener('click', event => {
             event.target.classList.add('active_data');
             video.classList.add('onVideo');
             audio.pause();
-            pauseBtn.src = "https://img.icons8.com/fluent-systems-filled/24/000000/circled-pause.png";
+            pauseBtn.src = playPauseBtn.pause;
 
             if (event.target.classList.contains('beach')) {
                 video.src = data[1].video;
                 audio = new Audio(data[1].audio);
+                audio.loop = true;
                 audio.play()
             } else if (event.target.classList.contains('nature')) {
                 video.src = data[0].video;
                 audio = new Audio(data[0].audio);
+                audio.loop = true;
                 audio.play()
             } else if (event.target.classList.contains('rain')) {
                 video.src = data[2].video;
                 audio = new Audio(data[2].audio);
+                audio.loop = true;
                 audio.play()
             } else if (event.target.classList.contains('nebula')) {
                 video.src = data[3].video;
                 audio = new Audio(data[3].audio);
+                audio.loop = true;
                 audio.play()
             }
 
@@ -98,16 +110,16 @@ appButtons.addEventListener('click', event => {
     if (event.target.classList.contains('pause')) {
         pauseBorder.classList.toggle('play')
         switch (event.target.src) {
-            case "https://img.icons8.com/fluent-systems-filled/24/000000/circled-pause.png":
-                event.target.src = "https://img.icons8.com/fluent-systems-filled/24/000000/google-play.png"
+            case playPauseBtn.pause:
+                event.target.src = playPauseBtn.play
                 audio.pause();
                 if (video.src !== "") {
                     video.pause();
                 }
 
                 break;
-            case "https://img.icons8.com/fluent-systems-filled/24/000000/google-play.png":
-                event.target.src = "https://img.icons8.com/fluent-systems-filled/24/000000/circled-pause.png"
+            case playPauseBtn.play:
+                event.target.src = playPauseBtn.pause
                 video.play();
                 audio.play();
                 break;
@@ -136,7 +148,7 @@ wrapper.addEventListener('mouseover', (el) => {
     console.dir(el)
     if (el.toElement.classList.contains('none')) {
 
-        appButtons.animate([{ opacity: 0.9},
+        appButtons.animate([{ opacity: 0.9 },
                 { opacity: 0.95, offset: 0.5 },
                 { opacity: 1 }
             ],
