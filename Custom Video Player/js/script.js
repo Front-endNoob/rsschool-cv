@@ -6,6 +6,7 @@ const progressBar = player.querySelector('.progress__filled');
 const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
 const inputs = player.querySelectorAll('.player__slider');
+const fullscreen = player.querySelector('.player__fullscreen');
 
 // Player Object
 const playerObj = {
@@ -19,18 +20,32 @@ const playerObj = {
   },
    //Img for button play|pause   
   updateButton: (e) => {
-    toggle.textContent = e.currentTarget.paused ? '►' : '❚❚';
+    toggle.textContent = e.currentTarget.paused ? '➤' : '❚❚';
+  },
+    // This fn for fullscreen on\off
+  fullScreen() {
+
+    switch (!document.fullscreenElement) {
+      case true:
+        player.requestFullscreen();
+        fullscreen.textContent = '▣';
+        break;
+    
+      default:
+        document.exitFullscreen();
+        fullscreen.textContent = '️️️️▢';
+        break;
+    }
   },
   // Skip when skip buttons are clicked
   skip: (e) => {
-    // Converts the data-skip attribute into a number and adds it to the current time
     video.currentTime += parseFloat(e.currentTarget.dataset.skip);
   },
   // playback rate or volume
   handleRangeUpdate: (e) => {
     video[e.currentTarget.name] = e.currentTarget.value;
   },
-  // Show percentage of movie played
+  // Show percent of movie played
   handleProgress: () => {
     const percent = (video.currentTime / video.duration) * 100;
     progressBar.style.flexBasis = `${percent}%`;
@@ -40,7 +55,12 @@ const playerObj = {
     // Upd video
     video.currentTime = scrubTime;
   },
-  init: () => {
+  // init Events
+  initial: () => {
+    // When video or fullscreen button is clicked, - on\off Full Screen
+      fullscreen.addEventListener('click', playerObj.fullScreen);
+      video.addEventListener('dblclick', playerObj.fullScreen);
+
     // When video or toggle button is clicked,- start or stop playback
       video.addEventListener('click', playerObj.togglePlay);
       toggle.addEventListener('click', playerObj.togglePlay);
@@ -72,4 +92,4 @@ const playerObj = {
   }
 }
 
-playerObj.init();
+playerObj.initial();

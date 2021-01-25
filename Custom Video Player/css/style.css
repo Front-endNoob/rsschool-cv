@@ -9,6 +9,24 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  .sound {
+    font-size: 18px;
+    color: white;
+    border: 0;
+    outline:0;
+    max-width: 15px;
+    background: transparent;
+  }
+
+  .time {
+    font-size: 18px;
+    color: white;
+    border: 0;
+    outline:0;
+    max-width: 15px;
+    background: transparent;
+  }
   
   .player {
     max-width: 950px;
@@ -89,6 +107,20 @@ body {
     background: #28df04;
     flex: 0;
     flex-basis: 50%;
+  }
+
+  .player__fullscreen {
+    font-size: 20px;
+    color: white;
+    border: 0;
+    outline:0;
+    max-width: 35px;
+    background: transparent;
+  }
+
+  .player:fullscreen {
+    max-width: none;
+    width: 100%;
   }
   
   
