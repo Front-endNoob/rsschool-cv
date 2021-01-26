@@ -4,12 +4,31 @@ body {
     color: blueviolet;
 }
 
-.custom-select {
-    position: relative;
-    top: 38px;
-    left: 60px;
-    width: 20px;
+.controls {
+    display: flex;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.custom-select {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+button {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20%;
+    background-color: aqua;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+  background-color: rgb(175, 13, 13);
+  color: antiquewhite;
 }
 
 .custom-select select {
@@ -27,24 +46,8 @@ h1 {
     text-align: center;
     font-size: 4rem;
     line-height: 1;
-    margin-bottom: 15px;
   }
 
-
-
-  button {
-      display: block;
-      text-align: center;
-      margin: 0 auto;
-      padding: 10px;
-      border-radius: 20%;
-      background-color: aqua;
-  }
-
-  button:hover {
-    background-color: rgb(175, 13, 13);
-    color: antiquewhite;
-  }
   
   .score {
     background: rgba(228, 210, 210, 0.2);
