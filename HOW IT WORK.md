@@ -5,7 +5,7 @@
 ## **You can also download this repository and follow the next steps to create an Electron application for your PC or Notebook:**
   1) Go to the section: **/simple-desktop-app-electronjs**
   2) Open **command line** or **terminal**
-  3) Enter: **nmp install**
+  3) Enter: **npm install**
   4) When the necessary dependencies are downloaded, you can pack or make an application installation file for your platform:
      4.1) Enter command: **npm run make** - for to attempt to automatically detect your platform and create an installation file.
      4.2) Enter command: **npm run package** - for to try to automatically detect your platform and create an immediately deployed package
