@@ -11,5 +11,5 @@
      4.2) Enter command: **npm run package** - for to try to automatically detect your platform and create an immediately deployed package
           of files in place with the application launch file
 ## 5) To manually specify the platform and its architecture, you can use a command of the form: --platform=<platform> --arch=<arch>
-   5.1) Example: With this code, we will pack an application for Linux with a 64-bit architecture npm run package --platform=linux --arch=x64
+   5.1) Example: With this code, we will pack an application for Linux with a 64-bit architecture: npm run package --platform=linux --arch=x64
    5.2) You can just specify the platform and that will be enough. Example: npm run package --platform=darwin and such a code command will package applications for the Mac OS system
